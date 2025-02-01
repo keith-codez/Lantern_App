@@ -1,6 +1,8 @@
 body{
     font-family: 'Ubuntu', sans-serif;
 }
+
+
 .logo-container {
     display: flex;
     align-items: center;
@@ -85,3 +87,5 @@ body{
       .5px .5px 0 #588157,   /* Bottom-right outline */
       10px 10px 15px rgba(0, 0, 0, 0.5);
   }
+
+  

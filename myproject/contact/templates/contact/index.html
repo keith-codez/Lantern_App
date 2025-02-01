@@ -1,0 +1,439 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lantern Intelligence Solutions</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+
+
+</head>
+<body class="bg-green-900 text-white">
+  <nav class="bg-white shadow-lg opacity-[.90] sticky top-0 z-50 text-xl font-sans font-semibold">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <div class="logo-container">
+        <img src="{% static '/Images/logo.png' %}" alt="Company Logo" class="logo">
+      </div>
+      <!-- Desktop Links -->
+      <div class="hidden md:flex space-x-10 items-center">
+        <a href="#about" class="relative nav-item text-[#132a13] hover:text-green-600 group">
+          About Us
+          <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-green-600 transition-all duration-300 ease-in-out group-hover:w-full"></span>
+        </a>
+        <a href="#portfolio" class="relative nav-item text-[#132a13] hover:text-green-600 group">
+          Our Work
+          <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-green-600 transition-all duration-300 ease-in-out group-hover:w-full"></span>
+        </a>
+        <a href="#services" class="relative nav-item text-[#132a13] hover:text-green-600 group">
+          Services
+          <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-green-600 transition-all duration-300 ease-in-out group-hover:w-full"></span>
+        </a>
+        <!-- Contact Button with Hover Border Change -->
+        <a href="#contact" class="relative nav-item text-[#132a13] border-[3px]  border-[#2c6e49] px-8 py-3 rounded-md transition-colors hover:text-green-600 duration-100">
+          Contact
+        </a>
+      </div>
+  
+      <!-- Mobile Hamburger Icon -->
+      <div class="md:hidden flex items-center" onclick="toggleMenu()">
+        <button class="text-green-900 focus:outline-none">
+          <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white text-[#132a13] overflow-hidden transition-all duration-300 ease-in-out text-2xl font-semibold">
+      <div class="flex flex-col items-center space-y-8 py-4">
+        <a href="#about" class="relative hover:text-green-600 group">
+          About Us
+          <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-green-600 transition-all duration-300 ease-in-out group-hover:w-full"></span>
+        </a>
+        <a href="#portfolio" class="relative hover:text-green-600 group">
+          Our Work
+          <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-green-600 transition-all duration-300 ease-in-out group-hover:w-full"></span>
+        </a>
+        <a href="#services" class="relative hover:text-green-600 group">
+          Services
+          <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-green-600 transition-all duration-300 ease-in-out group-hover:w-full"></span>
+        </a>
+        <a href="#contact" class="relative hover:text-green-600 group">
+          Contact
+          <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-green-600 transition-all duration-300 ease-in-out group-hover:w-full"></span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+
+<header class="bg-white text-white py-16 relative h-[75vh]" style="background-image: url('{% static 'Images/Banner.jpg' %}'); background-size: cover; background-position: center;">
+    <!-- Dark Overlay -->
+    <div class="absolute inset-0 bg-black opacity-50"></div> <!-- Dark overlay -->
+  
+    <div class="container mx-auto mt-5 text-center relative z-10 px-4">
+      <!-- Responsive Heading -->
+      <h1 class="text-outline ubuntu-medium text-5xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-normal mb-4 leading-tight text-center mx-auto max-w-3xl">
+        Your Partner in Streamlined Success
+      </h1>
+      <!-- Responsive Subtext -->
+      <p class="text-xl sm:text-xl md:text-2xl lg:text-3xl mb-10 drop-shadow-md">
+        Tailored Software Solutions for Better Business.
+      </p>
+      <!-- Call-to-Action Buttons -->
+      <div class="flex flex-col md:flex-row justify-center items-center gap-y-4 md:gap-y-0 md:gap-x-4 mt-8">
+        <a href="#contact" class="bg-[#ffc300] font-semibold sm:text-2xl md:text-2xl lg:text-2xl text-[#132a13] px-6 py-5 rounded-md transition-colors duration-100 hover:bg-white">
+          Book Free Consultation
+        </a>
+        <a href="#services" class="bg-[#dde5b6] font-semibold sm:text-2xl md:text-2xl lg:text-2xl text-[#132a13] px-6 py-5 rounded-md transition-colors duration-100 hover:bg-white">
+          Our Services
+        </a>
+      </div>
+    </div>
+</header>
+
+
+ <!-- About Section -->
+<section id="about" class="py-16 fade-in bg-gray-50">
+  <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
+    <!-- Image -->
+    <div class="md:w-1/2">
+      <img src="{% static '/Images/Brain.jpeg' %}" alt="About Us" class="rounded-lg shadow-lg w-full">
+    </div>
+    <!-- Text Content -->
+    <div class="md:w-1/2">
+      <h2 class="text-4xl font-bold mb-6 text-green-900">About Us</h2>
+      <p class="text-lg text-gray-600 leading-relaxed">
+        At <span class="font-bold text-green-600">Lantern Intelligence Solutions</span>, we specialize in crafting <span class="font-semibold">innovative web applications</span> designed for businesses and individuals. Through a thorough analysis of your business processes, we deliver custom solutions that work.
+      </p>
+      <p class="text-lg text-gray-600 leading-relaxed mt-4">
+        Our focus on <span class="font-semibold text-green-600">requirements gathering</span> ensures our applications are efficient, scalable, and perfectly aligned with your needs. We pride ourselves on turning your processes into solutions that truly make a difference.
+      </p>
+      <p class="text-lg text-gray-600 leading-relaxed mt-4">
+        Let us be your trusted partner in achieving streamlined success with tailored solutions built for growth and performance.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Website vs Web App Section -->
+<section id="difference" class="py-16 bg-gradient-to-r from-green-100 via-white to-green-50">
+  <div class="container mx-auto px-6 lg:px-8 text-center">
+    <h2 class="text-4xl font-extrabold mb-6 text-green-900">
+      Website <span class="font-bold text-green-600">VS</span> Web App
+    </h2>
+    <p class="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+      Not sure what you need? Let’s break it down for you!
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Website Card -->
+      <div class="bg-white rounded-lg shadow-lg p-6">
+        <h3 class="text-2xl font-bold text-green-800 mb-4">What’s a Website?</h3>
+        <p class="text-gray-700 mb-4">
+          A <strong>website</strong> is like a beautifully designed brochure or gallery—perfect for sharing 
+          information, showcasing your services, and building your online presence.
+        </p>
+        <ul class="space-y-3 text-left">
+          <li class="flex items-center">
+            <div class="w-6 h-6 flex-shrink-0 bg-green-100 text-green-600 flex justify-center items-center rounded-full">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <span class="ml-3 text-gray-700">Static content (like a digital storefront)</span>
+          </li>
+          <li class="flex items-center">
+            <div class="w-6 h-6 flex-shrink-0 bg-green-100 text-green-600 flex justify-center items-center rounded-full">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <span class="ml-3 text-gray-700">Accessible to anyone</span>
+          </li>
+          <li class="flex items-center">
+            <div class="w-6 h-6 flex-shrink-0 bg-green-100 text-green-600 flex justify-center items-center rounded-full">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <span class="ml-3 text-gray-700">Focus on information & visuals</span>
+          </li>
+        </ul>
+        <img src="{% static 'Images/website.jpg' %}" alt="Website Illustration" 
+             class="mt-6 mx-auto h-50 object-contain">
+      </div>
+
+      <!-- Web App Card -->
+      <div class="bg-white rounded-lg shadow-lg p-6">
+        <h3 class="text-2xl font-bold text-green-800 mb-4">What’s a Web App?</h3>
+        <p class="text-gray-700 mb-4">
+          A <strong>web app</strong> is like a digital tool or platform—interactive, dynamic, and built to solve problems or 
+          engage users in exciting ways.
+        </p>
+        <ul class="space-y-3 text-left">
+          <li class="flex items-center">
+            <div class="w-6 h-6 flex-shrink-0 bg-green-100 text-green-600 flex justify-center items-center rounded-full">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <span class="ml-3 text-gray-700">Interactive & user-focused</span>
+          </li>
+          <li class="flex items-center">
+            <div class="w-6 h-6 flex-shrink-0 bg-green-100 text-green-600 flex justify-center items-center rounded-full">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <span class="ml-3 text-gray-700">Customizable experiences</span>
+          </li>
+          <li class="flex items-center">
+            <div class="w-6 h-6 flex-shrink-0 bg-green-100 text-green-600 flex justify-center items-center rounded-full">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <span class="ml-3 text-gray-700">Think of apps like Airbnb or Amazon</span>
+          </li>
+        </ul>
+        <img src="{% static 'Images/webapp.jpeg' %}" alt="Web App Illustration" 
+             class="mt-6 mx-auto h-50 object-contain">
+      </div>
+    </div>
+
+    <p class="mt-8 text-lg text-gray-700">
+      Whether you need a stunning website to tell your story or a powerful web app to engage users, 
+      we’ve got you covered!
+    </p>
+  </div>
+</section>
+
+<!-- Portfolio Section -->
+<section id="portfolio" class="py-16 bg-[#f3f8f4] fade-in">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-4xl font-bold mb-6 text-green-900 text-center">Our Work</h2>
+    
+   <!-- Carousel Container -->
+
+    <div class="relative w-full max-w-5xl h-[600px] mx-auto overflow-hidden rounded-lg shadow-lg">
+      <div class="carousel h-full">
+        <div class="carousel-images flex transition-transform duration-500 ease-in-out h-full">
+          <!-- Image 1 -->
+          <div class="carousel-item min-w-full h-full">
+            <a href="https://zimstays.com/" target="_blank">
+              <img src="{% static '/Images/Zim1.png' %}" alt="Portfolio Image 1" 
+                class="w-full h-full object-cover object-center">
+            </a>
+          </div>
+          <!-- Image 2 -->
+          <div class="carousel-item min-w-full h-full">
+            <a href="https://zimstays.com/" target="_blank">
+              <img src="{% static '/Images/Zim2.png' %}" alt="Portfolio Image 2" 
+                class="w-full h-full object-cover object-center">
+            </a>
+          </div>
+          <!-- Image 3 -->
+          <div class="carousel-item min-w-full h-full">
+            <a href="https://zimstays.com/" target="_blank">
+              <img src="{% static '/Images/Zim3.png' %}" alt="Portfolio Image 3" 
+                class="w-full h-full object-cover object-center">
+            </a>
+          </div>
+           <!-- Image 4 -->
+           <div class="carousel-item min-w-full h-full">
+            <a href="https://popcorncrm.co.uk/" target="_blank">
+              <img src="{% static '/Images/Pop.png' %}" alt="Portfolio Image 3" 
+                class="w-full h-full object-cover object-center">
+            </a>
+          </div>
+           <!-- Image 5 -->
+           <div class="carousel-item min-w-full h-full">
+            <a href="https://popcorncrm.co.uk/" target="_blank">
+              <img src="{% static '/Images/Pop1.png' %}" alt="Portfolio Image 3" 
+                class="w-full h-full object-cover object-center">
+            </a>
+          </div>
+           <!-- Image 6 -->
+           <div class="carousel-item min-w-full h-full">
+            <a href="https://popcorncrm.co.uk/" target="_blank">
+              <img src="{% static '/Images/Pop2.png' %}" alt="Portfolio Image 3" 
+                class="w-full h-full object-cover object-center">
+              </a>
+          </div>
+          <!-- Image 7 -->
+          <div class="carousel-item min-w-full h-full">
+            <a href="https://example.com/project1" target="_blank">
+              <img src="{% static '/Images/coming.png' %}" alt="Portfolio Image 4" 
+                class="w-full h-full object-cover object-center">
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Carousel Navigation with Font Awesome Icons -->
+      <button id="prev" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-green-600 text-white p-4 rounded-full shadow-lg hover:bg-green-800 transition duration-300">
+        <i class="fas fa-chevron-left text-2xl"></i>
+      </button>
+      <button id="next" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-green-600 text-white p-4 rounded-full shadow-lg hover:bg-green-800 transition duration-300">
+        <i class="fas fa-chevron-right text-2xl"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+ <!-- Services Section -->
+<section id="services" class="bg-white py-16 fade-in">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold mb-6 text-green-900 text-center">Our Services</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <!-- Service 1: Web Applications -->
+    <div class="bg-green-50 rounded-lg shadow-lg p-8 text-center hover:scale-105 transition-transform duration-300 text-black">
+      <div class="flex justify-center mb-6">
+        <img src="{% static '/Images/Business.jpeg' %}" alt="Web Apps" class="w-64 h-64 object-cover mx-auto rounded-lg">
+      </div>
+      <h3 class="text-2xl font-semibold mb-4 text-green-900 hover:text-green-400 transition-colors duration-300">Web Applications</h3>
+      <p class="text-gray-600 mb-4">
+        <strong>Custom web applications</strong> designed to enhance user experiences, streamline processes, and provide interactive solutions across various industries.
+      </p>
+      <ul class="space-y-3 text-left">
+        <li class="flex items-start">
+          <div class="w-6 h-6 flex-shrink-0 bg-green-100 text-green-600 flex justify-center items-center rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <span class="ml-3 text-gray-700">Dynamic and interactive solutions</span>
+        </li>
+        <li class="flex items-start">
+          <div class="w-6 h-6 flex-shrink-0 bg-green-100 text-green-600 flex justify-center items-center rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <span class="ml-3 text-gray-700">Optimized for all platforms</span>
+        </li>
+        <li class="flex items-start">
+          <div class="w-6 h-6 flex-shrink-0 bg-green-100 text-green-600 flex justify-center items-center rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <span class="ml-3 text-gray-700">Scalable for growth and evolution</span>
+        </li>
+      </ul>
+    </div>
+    <!-- Service 2: Websites -->
+      <div class="bg-green-50 rounded-lg shadow-lg p-8 text-center hover:scale-105 transition-transform duration-300 text-black">
+        <div class="flex justify-center mb-6">
+          <img src="{% static '/Images/Individual.jpeg' %}" alt="Websites" class="w-64 h-64 object-cover mx-auto rounded-lg">
+        </div>
+        <h3 class="text-2xl font-semibold mb-4 text-green-900 hover:text-green-400 transition-colors duration-300">Websites</h3>
+        <p class="text-gray-600 mb-4">
+          <strong>Modern websites</strong> designed to engage visitors, showcase brands, and offer seamless browsing experiences. Perfect for businesses, portfolios, and personal projects.
+        </p>
+        <ul class="space-y-3 text-left">
+          <li class="flex items-start">
+            <div class="w-6 h-6 flex-shrink-0 bg-green-100 text-green-600 flex justify-center items-center rounded-full">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <span class="ml-3 text-gray-700">Responsive and mobile-friendly designs</span>
+          </li>
+          <li class="flex items-start">
+            <div class="w-6 h-6 flex-shrink-0 bg-green-100 text-green-600 flex justify-center items-center rounded-full">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <span class="ml-3 text-gray-700">SEO-optimized for better visibility</span>
+          </li>
+          <li class="flex items-start">
+            <div class="w-6 h-6 flex-shrink-0 bg-green-100 text-green-600 flex justify-center items-center rounded-full">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <span class="ml-3 text-gray-700">Customizable and easy to maintain</span>
+          </li>
+        </ul>
+      </div>
+      <!-- Service 3 -->
+      <div class="bg-green-50 rounded-lg shadow-lg p-8 text-center hover:scale-105 transition-transform duration-300 text-black">
+        <div class="flex justify-center mb-6">
+          <img src="{% static '/Images/Requirements.png' %}" alt="Requirements Gathering" class="w-64 h-64 object-cover mx-auto rounded-lg">
+        </div>
+        <h3 class="text-2xl font-semibold mb-4 text-green-900 hover:text-green-400 transition-colors duration-300">Requirements Gathering & Analysis</h3>
+        <p class="text-gray-600 mb-4">
+          <strong>In-depth analysis</strong> of your business needs to ensure that we deliver solutions that truly align with your goals and processes.
+        </p>
+        <ul class="space-y-3 text-left">
+          <li class="flex items-start">
+            <div class="w-6 h-6 flex-shrink-0 bg-green-100 text-green-600 flex justify-center items-center rounded-full">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <span class="ml-3 text-gray-700">Comprehensive business process modeling</span>
+          </li>
+          <li class="flex items-start">
+            <div class="w-6 h-6 flex-shrink-0 bg-green-100 text-green-600 flex justify-center items-center rounded-full">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <span class="ml-3 text-gray-700">Thorough understanding of requirements</span>
+          </li>
+          <li class="flex items-start">
+            <div class="w-6 h-6 flex-shrink-0 bg-green-100 text-green-600 flex justify-center items-center rounded-full">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <span class="ml-3 text-gray-700">Tailored solution strategies</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+ <!-- Contact Section -->
+<section id="contact" class="py-16 fade-in" style="background: linear-gradient(to bottom,  #ffffff, #31572c);">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold mb-6 text-green-900 text-center">Contact Us</h2>
+    <form action="" method="POST" class="max-w-lg mx-auto bg-white rounded-lg shadow p-6 text-black">
+      {% csrf_token %}
+      
+      {{ form.as_p }}
+      
+      <button type="submit" class="w-full mt-9 bg-green-200 font-semibold sm:text-2xl md:text-2xl lg:text-2xl text-[#132a13] px-6 py-5 rounded-md transition-colors duration-100 hover:bg-green-500">
+        Send Message
+      </button>
+    </form>
+  </div>
+</section>
+
+
+
+  <!-- Footer -->
+  <footer class="bg-white text-black py-6">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2025 Lantern Intelligence Solutions. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="{% static 'js/index.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lantern Intelligence Solutions</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+
+<body class="bg-gray-100">
+    <nav class="bg-white shadow-lg opacity-[.90] sticky top-0 z-50 text-xl font-sans font-semibold">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+          <div class="logo-container">
+            <img src="{% static '/Images/logo.png' %}" alt="Company Logo" class="logo">
+          </div>
+          <!-- Desktop Links -->
+          <div class="hidden md:flex space-x-10 items-center">
+            <a href="#about" class="relative nav-item text-[#132a13] hover:text-green-600 group">
+              About Us
+              <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-green-600 transition-all duration-300 ease-in-out group-hover:w-full"></span>
+            </a>
+            <a href="#portfolio" class="relative nav-item text-[#132a13] hover:text-green-600 group">
+              Our Work
+              <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-green-600 transition-all duration-300 ease-in-out group-hover:w-full"></span>
+            </a>
+            <a href="#services" class="relative nav-item text-[#132a13] hover:text-green-600 group">
+              Services
+              <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-green-600 transition-all duration-300 ease-in-out group-hover:w-full"></span>
+            </a>
+            <!-- Contact Button with Hover Border Change -->
+            <a href="#contact" class="relative nav-item text-[#132a13] border-[3px]  border-[#2c6e49] px-8 py-3 rounded-md transition-colors hover:text-green-600 duration-100">
+              Contact
+            </a>
+          </div>
+      
+          <!-- Mobile Hamburger Icon -->
+          <div class="md:hidden flex items-center" onclick="toggleMenu()">
+            <button class="text-green-900 focus:outline-none">
+              <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white text-[#132a13] overflow-hidden transition-all duration-300 ease-in-out text-2xl font-semibold">
+          <div class="flex flex-col items-center space-y-8 py-4">
+            <a href="#about" class="relative hover:text-green-600 group">
+              About Us
+              <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-green-600 transition-all duration-300 ease-in-out group-hover:w-full"></span>
+            </a>
+            <a href="#portfolio" class="relative hover:text-green-600 group">
+              Our Work
+              <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-green-600 transition-all duration-300 ease-in-out group-hover:w-full"></span>
+            </a>
+            <a href="#services" class="relative hover:text-green-600 group">
+              Services
+              <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-green-600 transition-all duration-300 ease-in-out group-hover:w-full"></span>
+            </a>
+            <a href="#contact" class="relative hover:text-green-600 group">
+              Contact
+              <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-green-600 transition-all duration-300 ease-in-out group-hover:w-full"></span>
+            </a>
+          </div>
+        </div>
+      </nav>
+    <div class="container mx-auto text-center py-20">
+        <h1 class="text-4xl font-bold text-green-700">Thank You!</h1>
+        <p class="text-lg mt-4">Your message has been sent successfully. We'll get back to you shortly.</p>
+        <a href="{% url 'index' %}" class="mt-6 inline-block bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700">
+            Return to Home
+        </a>
+    </div>
+
+    <!-- Footer -->
+<footer class="bg-white text-black py-6 mt-auto">
+    <div class="container mx-auto text-center">
+        <p>&copy; 2025 Lantern Intelligence Solutions. All rights reserved.</p>
+    </div>
+    </footer>
+  <script src="{% static 'js/index.js' %}"></script>
+</body>
+</html>

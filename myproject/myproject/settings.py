@@ -82,7 +82,7 @@ DATABASES = {
         'USER':'postgres', 
         'PASSWORD': 'gOtMMchlzAJbRMVYOEEYmMRDHnZUCniG', 
         'HOST':'junction.proxy.rlwy.net:39761',
-        'PORT':'5432', 
+        'PORT':'39761', 
     }
 }
 

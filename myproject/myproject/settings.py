@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-y4rpr2u@wx*1da4(=x%bic6gs30&4f)#^eu8wyb^85x+fd*=wj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://lanternintelligencesolutions.com', 'lantern.railway.internal']
+ALLOWED_HOSTS = ['https://lanternintelligencesolutions.com', 'lantern.railway.internal', 'lanternintelligencesolutions.com']
 CSRF_TRUSTED_ORIGINS = ['https://lanternintelligencesolutions.com']
 
 # Application definition

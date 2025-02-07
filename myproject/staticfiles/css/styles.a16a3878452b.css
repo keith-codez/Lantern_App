@@ -1,0 +1,91 @@
+body{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+.logo-container {
+    display: flex;
+    align-items: center;
+  }
+  .logo {
+    width: 70px;
+    height: 65px;
+    margin-right: 10px;
+  }
+  /* Custom Animations */
+  .fade-in {
+    animation: fadeIn 1s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  /* Nav Bar Animation */
+  .nav-item {
+    transition: transform 0.3s ease;
+  }
+  .nav-item:hover {
+    transform: scale(1.1);
+  }
+
+ 
+  .ubuntu-light {
+    font-family: "Ubuntu", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .ubuntu-regular {
+    font-family: "Ubuntu", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .ubuntu-medium {
+    font-family: "Ubuntu", serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .ubuntu-bold {
+    font-family: "Ubuntu", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .ubuntu-light-italic {
+    font-family: "Ubuntu", serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .ubuntu-regular-italic {
+    font-family: "Ubuntu", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .ubuntu-medium-italic {
+    font-family: "Ubuntu", serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .ubuntu-bold-italic {
+    font-family: "Ubuntu", serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+
+  .text-outline {
+    text-shadow: 
+      -.5px -.5px 0 #6dce6c, /* Top-left outline */
+      .5px -.5px 0 #588157,  /* Top-right outline */
+      -.5px .5px 0 #588157,  /* Bottom-left outline */
+      .5px .5px 0 #588157,   /* Bottom-right outline */
+      10px 10px 15px rgba(0, 0, 0, 0.5);
+  }
+
+  

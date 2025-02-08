@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('django-insecure-y4rpr2u@wx*1da4(=x%bic6gs30&4f)#^eu8wyb^85x+fd*=wj')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False 
+DEBUG = True
 #'localhost', '127.0.0.1', 'lanternintelligencesolutions.com', 'lantern-production-59d8.up.railway.app
 ALLOWED_HOSTS = ['localhost', '127.0.0.1','165.232.47.126']
 #CSRF_TRUSTED_ORIGINS = ['https://lanternintelligencesolutions.com', 'https://lantern-production-59d8.up.railway.app']
